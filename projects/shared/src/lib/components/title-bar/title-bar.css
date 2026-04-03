@@ -1,0 +1,19 @@
+:host {
+  display: block;
+}
+
+.title-bar {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) 3rem;
+  align-items: center;
+}
+
+.title-bar__back-button,
+.title-bar__placeholder {
+  width: 3rem;
+  height: 3rem;
+}
+
+.title-bar__title {
+  text-align: center;
+}

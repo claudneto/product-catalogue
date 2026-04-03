@@ -1,0 +1,19 @@
+<mat-toolbar class="title-bar">
+  @if (showBackButton()) {
+    <button
+      mat-icon-button
+      type="button"
+      class="title-bar__back-button"
+      aria-label="Voltar para a página anterior"
+      (click)="navigateBack()"
+    >
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+  } @else {
+    <span class="title-bar__placeholder" aria-hidden="true"></span>
+  }
+
+  <span class="title-bar__title">{{ title() }}</span>
+
+  <span class="title-bar__placeholder" aria-hidden="true"></span>
+</mat-toolbar>

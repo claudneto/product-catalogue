@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": ".",
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -11,6 +12,16 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "experimentalDecorators": true,
+    "paths": {
+      "shared": ["./projects/shared/src/public-api.ts"],
+      "@br/environments/*": ["projects/br/src/environments/*"],
+      "@br/core/*": ["projects/br/src/app/core/*"],
+      "@br/features/*": ["projects/br/src/app/features/*"],
+      "@shared/components/*": ["projects/shared/lib/components"],
+      "@shared/models/*": ["projects/shared/lib/models"],
+      "@shared/services/*": ["projects/shared/lib/services"],
+      "@shared/utils/*": ["projects/shared/lib/utils"]
+    },
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve"
@@ -21,5 +32,19 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/br/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/br/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/shared/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/shared/tsconfig.spec.json"
+    }
+  ]
 }

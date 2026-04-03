@@ -1,0 +1,179 @@
+{
+  "data": [
+    {
+      "nid": 36,
+      "catalog_year_label": "Catalog year",
+      "catalog_year": "2020",
+      "title_label": "Product name",
+      "title": "Peptamen\u00ae P\u00f3",
+      "slug": "peptamen-po",
+      "images_carousel": [],
+      "product_image": "\/sites\/default\/files\/styles\/pwa_product\/public\/2024-03\/peptamen-po.jpg",
+      "product_image_alt": "Peptamen\u00ae P\u00f3",
+      "product_definition_label": "Defini\u00e7\u00e3o do Produto",
+      "product_definition": "\u003Cp\u003EF\u00f3rmula modificada \u00e0 base de pept\u00eddeos 100% de prote\u00edna do soro de leite hidrolisada, com 65% de TCM do total de gorduras, normocal\u00f3rica (na dilui\u00e7\u00e3o padr\u00e3o) e isenta de lactose.\u003C\/p\u003E\r\n",
+      "indications_label": "Indica\u00e7\u00f5es",
+      "indications": "\u003Cp\u003EPara o manejo nutricional de pessoas com intoler\u00e2ncia gastrointestinal e\/ou com dificuldade na absor\u00e7\u00e3o da prote\u00edna intacta\u003Csup\u003E1-7\u003C\/sup\u003E\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Csmall\u003ERefer\u00eancias Bibliogr\u00e1ficas\u003C\/small\u003E\u003C\/p\u003E\r\n\r\n\u003Col\u003E\r\n\t\u003Cli\u003E\u003Csmall\u003EMcClave SA, et al. Guidelines for the Provision and Assessment of Nutrition Support Therapy in the Adult Critically Ill Patient: Society of Critical Care Medicine (SCCM) and American Society for Parenteral and Enteral Nutrition (ASPEN). JPEN. 2016;40(2):159-211.\u003C\/small\u003E\u003C\/li\u003E\r\n\t\u003Cli\u003E\u003Csmall\u003EMarik PE. Feeding critically ill patients the right \u0027whey\u0027: thinking outside of the box. A personalview. Ann Intensive Care. 2015;5(1):51.\u003C\/small\u003E\u003C\/li\u003E\r\n\t\u003Cli\u003E\u003Csmall\u003EKhoshoo V, Brown S. Gastric emptying of two whey-based formulas of different energy density and its clinical implication in children with volume intolerance. Eur J Clin Nutr. 2002;56(7):656-658.\u003C\/small\u003E\u003C\/li\u003E\r\n\t\u003Cli\u003E\u003Csmall\u003ESchott LL, et al. Utilization of Peptide based diets in Severely ill patients. Presented at ASPEN Nutrition and Practice Conference 2021.\u003C\/small\u003E\u003C\/li\u003E\r\n\t\u003Cli\u003E\u003Csmall\u003ELaVallee C, et al. Real-World Evidence of Treatment, Tolerance, Healthcare Utilization, and Costs Among Postacute Care Adult Patients Receiving Enteral Peptide-Based Diets in the United States. JPEN. 2021;45(8):1729-1735.\u003C\/small\u003E\u003C\/li\u003E\r\n\t\u003Cli\u003E\u003Csmall\u003EMundi MS, et al. Reduction in Healthcare Utilization With Transition to Peptide-Based Diets in Intolerant Home Enteral Nutrition Patients. Nutr Clin Pract. 2020;35(3):487-494.\u003C\/small\u003E\u003C\/li\u003E\r\n\t\u003Cli\u003E\u003Csmall\u003EFried MD, et al. Decrease in gastric emptying time and episodes of regurgitation in children with spastic quadriplegia fed a whey-based formula. The Journal of pediatrics. 1992;120(4):569-572.\u003C\/small\u003E\u003C\/li\u003E\r\n\u003C\/ol\u003E\r\n",
+      "complement_label": "Complement",
+      "complement": "\u003Cp\u003EN\u00c3O CONT\u00c9M GL\u00daTEN\u003C\/p\u003E\r\n",
+      "brand_label_label": null,
+      "brand_label": "Brand",
+      "brand": [
+        {
+          "tid": "25",
+          "title": "Peptamen\u00ae"
+        }
+      ],
+      "category_label": "Clinical condition",
+      "category": [
+        {
+          "tid": "32",
+          "title": "Situa\u00e7\u00f5es Cr\u00edticas"
+        }
+      ],
+      "fats_label": "Energy Distribution - fats",
+      "fats": "28",
+      "carbohydrates_label": "Energy Distribution - carbohydrates",
+      "carbohydrates": "55",
+      "proteins_label": "Energy Distribution - proteins",
+      "proteins": "17",
+      "nutritional_table_label": "Informa\u00e7\u00e3o nutricional",
+      "nutritional_table": [
+        {
+          "image_url": "\/sites\/default\/files\/styles\/pwa_product_nutritional\/public\/2025-04\/Peptamen_PO-tab1.png",
+          "image_url_alt": "Peptamen\u00ae P\u00f3"
+        },
+        {
+          "image_url": "\/sites\/default\/files\/styles\/pwa_product_nutritional\/public\/2025-04\/Peptamen_PO-tab2.png",
+          "image_url_alt": "Peptamen\u00ae P\u00f3"
+        },
+        {
+          "image_url": "\/sites\/default\/files\/styles\/pwa_product_nutritional\/public\/2025-04\/Peptamen_PO-tab3.png",
+          "image_url_alt": "Peptamen\u00ae P\u00f3"
+        }
+      ],
+      "nutrition_table_caption_label": "Nutrition table caption",
+      "nutrition_table_caption": "",
+      "technical_characteristics_label": "Caracter\u00edsticas t\u00e9cnicas",
+      "technical_characteristics": [
+        {
+          "content": "\u003Cp\u003E100% prote\u00edna do soro do leite hidrolisada\u003C\/p\u003E\r\n",
+          "title": "Fonte de prote\u00ednas"
+        },
+        {
+          "content": "\u003Cp\u003E88% maltodextrina e 12% sacarose\u003C\/p\u003E\r\n",
+          "title": "Fonte de carboidratos"
+        },
+        {
+          "content": "\u003Cp\u003E65% TCM, 24% \u00f3leo de canola de baixo teor er\u00facico e 11% \u00f3leo de soja\u003C\/p\u003E\r\n",
+          "title": "Fonte de gorduras"
+        },
+        {
+          "content": "\u003Cp\u003E310 mOsm\/kg de \u00e1gua\u003C\/p\u003E\r\n",
+          "title": "Osmolaridade"
+        },
+        {
+          "content": "\u003Cp\u003E380 mOsm\/kg de \u00e1gua\u003C\/p\u003E\r\n",
+          "title": "Osmolalidade"
+        },
+        {
+          "content": "\u003Cp\u003E122:1\u003C\/p\u003E\r\n",
+          "title": "Rela\u00e7\u00e3o caloria n\u00e3o proteica\/gN"
+        },
+        {
+          "content": "\u003Cp\u003ELata de 400 g\u003C\/p\u003E\r\n",
+          "title": "Apresenta\u00e7\u00e3o"
+        },
+        {
+          "content": "\u003Cp\u003EBaunilha\u003C\/p\u003E\r\n",
+          "title": "Sabor"
+        },
+        {
+          "content": "\u003Cp\u003E1 kcal\/mL\u003C\/p\u003E\r\n",
+          "title": "Densidade cal\u00f3rica"
+        },
+        {
+          "content": "\u003Cp\u003EMaltodextrina, prote\u00edna hidrolisada do soro de leite de vaca, triglicer\u00eddeos de cadeia m\u00e9dia, sacarose, \u00f3leo de canola com baixo teor er\u00facico, minerais (citrato de c\u00e1lcio, fosfato de s\u00f3dio dib\u00e1sico, fosfato de pot\u00e1ssio dib\u00e1sico, carbonato de magn\u00e9sio, cloreto de s\u00f3dio, cloreto de c\u00e1lcio, sulfato ferroso, sulfato de zinco, sulfato de mangan\u00eas, sulfato de cobre, iodeto de pot\u00e1ssio, molibdato de s\u00f3dio, selenato de s\u00f3dio e cloreto de cromo), \u00f3leo de soja, vitaminas (bitartarato de colina, L-ascorbato de s\u00f3dio, acetato de DL-alfa-tocoferila, nicotinamida, D-pantotenato de c\u00e1lcio, cloridrato de piridoxina, tiamina mononitrato, riboflavina, acetato de retinila, \u00e1cido N-pteroil-Lglut\u00e2mico, fitomenadiona, D- biotina, colecalciferol e cianocobalamina), L-carnitina, taurina, aromatizante, reguladores de acidez hidr\u00f3xido de pot\u00e1ssio, citrato de pot\u00e1ssio e \u00e1cido c\u00edtrico e emulsificante lecitina de soja.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EAL\u00c9RGICOS: CONT\u00c9M DERIVADOS DE LEITE E SOJA. N\u00c3O CONT\u00c9M GL\u00daTEN.\u003C\/strong\u003E\u003C\/p\u003E\r\n",
+          "title": "Ingredientes "
+        },
+        {
+          "content": "\u003Cp\u003EManter a lata sempre bem fechada em local fresco, seco e inodoro. Iniciado o uso do produto, recomenda-se o consumo em at\u00e9 30 dias.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EPara alimenta\u00e7\u00e3o oral: \u003C\/strong\u003Etodos os produtos preparados em temperatura ambiente devem ser consumidos em at\u00e9 4 horas. Tampar a por\u00e7\u00e3o n\u00e3o utilizada, refrigerar e consumir em at\u00e9 24 horas.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EPara alimenta\u00e7\u00e3o enteral:\u003C\/strong\u003E transferir o produto preparado para um sistema fechado est\u00e9ril e ministrar em at\u00e9 4 horas.\u003C\/p\u003E\r\n",
+          "title": "Conserva\u00e7\u00e3o do Produto"
+        },
+        {
+          "content": "\u003Cp\u003E12 meses\u003C\/p\u003E\r\n",
+          "title": "Validade do produto"
+        }
+      ],
+      "technical_characteristics_complement_label": "Technical characteristics complement",
+      "technical_characteristics_complement": "",
+      "feeding_table_label": "Tabela de alimenta\u00e7\u00e3o",
+      "feeding_table": null,
+      "method_of_preparation_label": "Modo de Preparo\/instru\u00e7\u00f5es",
+      "method_of_preparation": "\u003Col\u003E\r\n\t\u003Cli\u003E\r\n\t\u003Cp\u003ELave as m\u00e3os. Selecione na tabela de dosagem o volume a ser preparado.\u003C\/p\u003E\r\n\t\u003C\/li\u003E\r\n\t\u003Cli\u003E\r\n\t\u003Cp\u003EMe\u00e7a a quantidade de \u00e1gua pot\u00e1vel (\u00e0 temperatura ambiente) e despeje em recipiente limpo.\u003C\/p\u003E\r\n\t\u003C\/li\u003E\r\n\t\u003Cli\u003E\r\n\t\u003Cp\u003EMe\u00e7a a quantidade necess\u00e1ria de p\u00f3, pesado em gramas, ou de acordo com o n\u00famero de colheres de medida indicado na tabela de dosagem.\u003C\/p\u003E\r\n\t\u003C\/li\u003E\r\n\t\u003Cli\u003E\r\n\t\u003Cp\u003EAdicione o p\u00f3 \u00e0 \u00e1gua e mexa imediatamente ate homogeneizar.\u003Cbr \/\u003E\r\n\tAp\u00f3s o uso, guarde a colher-medida dentro da lata e feche bem a embalagem.\u003C\/p\u003E\r\n\t\u003C\/li\u003E\r\n\u003C\/ol\u003E\r\n",
+      "dosage_table_title_label": "Dosage table title",
+      "dosage_table_title": "Tabela de Dosagem",
+      "dosage_table_label": "Dosage table",
+      "dosage_table_total_volume_title": "Volume total",
+      "dosage_table_num_powder_title": "N\u00b0 de colheres medidas ou total de p\u00f3 em gramas",
+      "dosage_table_water_volume_title": "Volume de \u00e1gua",
+      "dosage_table_extra_information": "\u003Cp\u003ERendimento 1,8 litros.\u003C\/p\u003E\r\n",
+      "dosage_table": [
+        {
+          "total_volume": "250 mL",
+          "measure": "6 colheres medidas ou 56 g",
+          "water_volume": "210 mL"
+        },
+        {
+          "total_volume": "500 mL",
+          "measure": "12 colheres medidas ou 112 g",
+          "water_volume": "420 mL"
+        },
+        {
+          "total_volume": "1 L",
+          "measure": "24 colheres medidas ou 224 g",
+          "water_volume": "840mL"
+        }
+      ],
+      "consumption_suggestion_label": "Sugest\u00e3o de Consumo",
+      "consumption_suggestion": "\u003Cp\u003EUsar somente sob orienta\u00e7\u00e3o m\u00e9dica ou de nutricionista. Proibido o uso por via parenteral.\u003C\/p\u003E\r\n",
+      "advertence_label": "Metadata",
+      "advertence": "",
+      "patients_label": "",
+      "patients": "",
+      "dieta_label": "",
+      "dieta": "",
+      "acesso_label": null,
+      "acesso": null,
+      "alergenos_label": null,
+      "alergenos": null,
+      "car_nutri_label": null,
+      "car_nutri": null,
+      "content_label": "",
+      "content": "",
+      "nutrients": null,
+      "metatags": {
+        "canonical_url": "https:\/\/www.avantenestle.com.br\/pwa\/produtos\/detalhe\/peptamen-po",
+        "google_site_verification": ["8HvE6G8DDTMVlvREottFSmc98ey9j7fyHK4ElZKNNzk"],
+        "hreflang_xdefault": "https:\/\/www.avantenestle.com.br\/api-pwa\/product",
+        "og_image": [
+          "https:\/\/www.avantenestle.com.br\/sites\/default\/files\/placeholders\/image\/img-default_1.jpg"
+        ],
+        "title": "Peptamen\u00ae P\u00f3 | Avante Nestl\u00e9",
+        "twitter_cards_image": "https:\/\/www.avantenestle.com.br\/sites\/default\/files\/placeholders\/image\/img-default_1.jpg",
+        "description": "Peptamen\u00ae P\u00f3",
+        "og_description": "Peptamen\u00ae P\u00f3",
+        "og_image_url": [
+          "https:\/\/www.avantenestle.com.br\/sites\/default\/files\/placeholders\/image\/img-default_1.jpg"
+        ],
+        "og_site_name": "Avante Nestl\u00e9",
+        "og_title": "Peptamen\u00ae P\u00f3 | Avante Nestl\u00e9",
+        "og_type": "website",
+        "og_url": "https:\/\/www.avantenestle.com.br\/pwa\/produtos\/detalhe\/peptamen-po",
+        "twitter_cards_description": "Peptamen\u00ae P\u00f3",
+        "twitter_cards_title": "Peptamen\u00ae P\u00f3",
+        "twitter_cards_type": "summary"
+      }
+    }
+  ]
+}

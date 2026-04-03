@@ -1,0 +1,72 @@
+:host {
+  display: block;
+}
+
+.footer {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid #dbe3ea;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.9), rgb(241 245 249 / 0.98)),
+    #fff;
+}
+
+.footer__brand {
+  display: grid;
+  gap: 1rem;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer__logo ::ng-deep [footerLogo] {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer__logo ::ng-deep [footerLogo] img {
+  display: block;
+  max-height: 2.5rem;
+  width: auto;
+}
+
+.footer__description,
+.footer__meta {
+  margin: 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.footer__link {
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+  color: #ea580c;
+}
+
+@media (min-width: 920px) {
+  .footer {
+    grid-template-columns: minmax(0, 1.4fr) auto;
+    align-items: end;
+  }
+
+  .footer__meta {
+    grid-column: 1 / -1;
+  }
+}

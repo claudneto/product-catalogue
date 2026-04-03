@@ -1,0 +1,30 @@
+<mat-toolbar class="nav-bar" aria-label="Navegacao principal">
+  <div class="nav-bar__logo">
+    <ng-content select="[navBarLogo]"></ng-content>
+  </div>
+
+  <nav class="nav-bar__menu" aria-label="Menu principal">
+    @for (item of menuItems; track item.id) {
+      <a mat-button [href]="item.href">
+        {{ item.label }}
+      </a>
+    }
+  </nav>
+
+  <div class="nav-bar__social" aria-label="Redes sociais">
+    @for (link of socialLinks; track link.id) {
+      <a
+        mat-icon-button
+        class="nav-bar__social-link"
+        [href]="link.href"
+        [attr.aria-label]="link.label"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path [attr.d]="link.path" />
+        </svg>
+      </a>
+    }
+  </div>
+</mat-toolbar>

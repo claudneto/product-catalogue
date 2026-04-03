@@ -1,0 +1,13 @@
+<shared-nav-bar>
+  <a navBarLogo routerLink="/" aria-label="Ir para a página inicial">
+    <img src="/logo-header.svg" [alt]="title()" height="40" />
+  </a>
+</shared-nav-bar>
+
+<main class="app-content">
+  <router-outlet />
+</main>
+
+<shared-footer>
+  <img footerLogo src="/logo-footer.svg" [alt]="title()" height="40" />
+</shared-footer>
