@@ -3,4 +3,5 @@
  */
 
 export * from './lib/components';
-export * from './lib/tokens';
+export * from './lib/services';
+export * from './lib/models';

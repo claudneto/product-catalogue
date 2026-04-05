@@ -1,0 +1,26 @@
+<shared-title-bar [title]="title"></shared-title-bar>
+<section class="brand-page">
+  @if (loading()) {
+  <div class="brand-page__state">
+    <mat-spinner diameter="40" />
+    <p>Carregando marcas...</p>
+  </div>
+  } @else if (error()) {
+  <div class="brand-page__state">
+    <p>Não foi possível carregar as marcas.</p>
+    <button mat-flat-button color="primary" type="button" (click)="reload()">
+      Tentar novamente
+    </button>
+  </div>
+  } @else if (brands().length === 0) {
+  <div class="brand-page__state">
+    <p>Nenhuma marca encontrada.</p>
+  </div>
+  } @else {
+  <div class="brand-page__grid">
+    @for (brand of brands(); track brand.tid) {
+    <lib-brand-card [brand]="brand" />
+    }
+  </div>
+  }
+</section>

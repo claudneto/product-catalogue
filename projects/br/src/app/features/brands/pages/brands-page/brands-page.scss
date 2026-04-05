@@ -1,0 +1,40 @@
+:host {
+  display: block;
+}
+
+.brand-page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.brand-page__header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand-page__title {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.brand-page__subtitle {
+  margin: 0.5rem 0 0;
+  color: rgba(0, 0, 0, 0.68);
+}
+
+.brand-page__state {
+  min-height: 240px;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.brand-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}

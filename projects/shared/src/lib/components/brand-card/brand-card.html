@@ -1,0 +1,27 @@
+<mat-card class="brand-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>{{ brand().title }}</mat-card-title>
+  </mat-card-header>
+
+  @if (brand().logo) {
+  <img
+    mat-card-image
+    class="brand-card__image"
+    [src]="brand().logo"
+    [alt]="brand().logoAlt || brand().title"
+    loading="lazy"
+  />
+  }
+
+  <mat-card-content>
+    @if (brand().description) {
+    <div class="brand-card__meta-item" [innerHTML]="brand().description"></div>
+    }
+  </mat-card-content>
+
+  @if (brand().brandUrl) {
+  <mat-card-actions align="end">
+    <a mat-stroked-button color="primary" [href]="brand().brandUrl"> Acessar marca </a>
+  </mat-card-actions>
+  }
+</mat-card>
