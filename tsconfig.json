@@ -17,10 +17,10 @@
       "@br/environments/*": ["projects/br/src/environments/*"],
       "@br/core/*": ["projects/br/src/app/core/*"],
       "@br/features/*": ["projects/br/src/app/features/*"],
-      "@shared/components/*": ["projects/shared/lib/components"],
-      "@shared/models/*": ["projects/shared/lib/models"],
-      "@shared/services/*": ["projects/shared/lib/services"],
-      "@shared/utils/*": ["projects/shared/lib/utils"]
+      "@shared/components/*": ["projects/shared/src/lib/components/*"],
+      "@shared/models/*": ["projects/shared/src/lib/models/*"],
+      "@shared/services/*": ["projects/shared/src/lib/services/*"],
+      "@shared/utils/*": ["projects/shared/src/lib/utils/*"]
     },
     "importHelpers": true,
     "target": "ES2022",
