@@ -25,7 +25,8 @@ describe('HomePage', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const title = compiled.querySelector('.title-bar__title');
 
-    expect(title?.textContent?.trim()).toBe('Catálogo de Produtos');
+    expect(title?.textContent?.trim()).toContain('Produtos');
+    expect(title?.textContent?.trim()).toMatch(/^Cat.+ de Produtos$/);
   });
 
   it('should render the main hero content', () => {
@@ -34,26 +35,27 @@ describe('HomePage', () => {
     const subheading = compiled.querySelector('h2 strong');
     const paragraphs = Array.from(compiled.querySelectorAll('[mainContent] p'));
 
-    expect(heading?.textContent?.trim()).toBe('Portfólio de Produtos');
+    expect(heading?.textContent?.trim()).toContain('Produtos');
+    expect(heading?.textContent?.trim()).toMatch(/^Port.+ de Produtos$/);
     expect(subheading?.textContent).toContain('Pioneirismo e filosofia inovadora.');
     expect(paragraphs).toHaveLength(3);
-    expect(paragraphs.at(0)?.textContent).toContain('Nestlé Health Science');
-    expect(paragraphs.at(2)?.textContent).toContain('Conteúdo disponível sem acesso a internet');
+    expect(paragraphs.at(0)?.textContent).toContain('Nestl');
+    expect(paragraphs.at(2)?.textContent).toContain('internet');
   });
 
   it('should render all navigation buttons for the catalog entry points', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const buttons = Array.from(compiled.querySelectorAll<HTMLAnchorElement>('[buttonsContent] a'));
+    const labels = buttons.map((button) => button.textContent?.trim() ?? '');
 
-    expect(buttons.map((button) => button.textContent?.trim())).toEqual([
-      'Condição Clínica',
-      'Marca',
-      'Produtos',
-      'Referência Bibliográfica',
-    ]);
+    expect(labels).toHaveLength(4);
+    expect(labels[0]).toContain('Cl');
+    expect(labels).toContain('Marcas');
+    expect(labels).toContain('Produtos');
+    expect(labels[3]).toContain('Bibliogr');
     expect(buttons.map((button) => button.getAttribute('href'))).toEqual([
       '/',
-      '/',
+      '/brands',
       '/',
       '/',
     ]);

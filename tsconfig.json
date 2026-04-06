@@ -13,16 +13,17 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "paths": {
-      "shared": ["./projects/shared/src/public-api.ts"],
+      "shared": ["projects/shared/src/public-api.ts"],
       "@br/environments/*": ["projects/br/src/environments/*"],
       "@br/core/*": ["projects/br/src/app/core/*"],
       "@br/features/*": ["projects/br/src/app/features/*"],
-      "@shared/components/*": ["projects/shared/src/lib/components/*"],
-      "@shared/mappers/*": ["projects/shared/src/lib/mappers/*"],
-      "@shared/models/*": ["projects/shared/src/lib/models/*"],
-      "@shared/services/*": ["projects/shared/src/lib/services/*"],
-      "@shared/utils/*": ["projects/shared/src/lib/utils/*"]
-    },
+        "@shared/components/*": ["projects/shared/src/lib/components/*"],
+        "@shared/mappers/*": ["projects/shared/src/lib/mappers/*"],
+        "@shared/models/*": ["projects/shared/src/lib/models/*"],
+        "@shared/services/*": ["projects/shared/src/lib/services/*"],
+        "@shared/tokens/*": ["projects/shared/src/lib/tokens/*"],
+        "@shared/utils/*": ["projects/shared/src/lib/utils/*"]
+      },
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve"

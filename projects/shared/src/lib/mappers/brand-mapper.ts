@@ -1,8 +1,7 @@
-import { inject, Injectable, InjectionToken } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { BrandDto } from '@shared/models/dtos/brand-dto';
+import { IMAGES_BASE_URL } from '@shared/tokens/images-base-url.token';
 import { Brand } from 'shared';
-
-export const IMAGES_BASE_URL = new InjectionToken<string>('IMAGES_BASE_URL');
 
 @Injectable({
   providedIn: 'root',
