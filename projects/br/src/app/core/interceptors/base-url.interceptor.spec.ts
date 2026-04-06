@@ -9,7 +9,7 @@ import {
 } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { API_BASE_URL } from 'shared';
-import { baseUrlInterceptor } from './base-url.interceptor';
+import { baseUrlInterceptor } from '@br/app/core/interceptors/base-url.interceptor';
 
 describe('baseUrlInterceptor', () => {
   let httpClient: HttpClient;

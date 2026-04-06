@@ -4,11 +4,11 @@ import { catchError, map, switchMap } from 'rxjs/operators';
 
 import { BrandApi } from '@shared/services/api/brand-api';
 // import { CategoryApi } from '@shared/services/api/category-api';
-// import { ProductApi } from '@shared/services/api/product-api';
+import { ProductsApi } from '@shared/services/api/products-api';
 
 import { BrandStorage } from '@shared/services/storage/brand-storage';
 // import { CategoryStorage } from '@shared/services/storage/category-storage';
-// import { ProductStorage } from '@shared/services/storage/product-storage';
+import { ProductStorage } from '@shared/services/storage/product-storage';
 
 @Injectable({
   providedIn: 'root',
@@ -16,11 +16,11 @@ import { BrandStorage } from '@shared/services/storage/brand-storage';
 export class CatalogSync {
   private readonly brandApi = inject(BrandApi);
   // private readonly categoryApi = inject(CategoryApi);
-  // private readonly productApi = inject(ProductApi);
+  private readonly productsApi = inject(ProductsApi);
 
   private readonly brandStorage = inject(BrandStorage);
   // private readonly categoryStorage = inject(CategoryStorage);
-  // private readonly productStorage = inject(ProductStorage);
+  private readonly productStorage = inject(ProductStorage);
 
   public run(): Observable<void> {
     return forkJoin([
@@ -32,11 +32,9 @@ export class CatalogSync {
       //   this.categoryApi.getAll(),
       //   (categories) => this.categoryStorage.replaceAll(categories)
       // ),
-      // this.syncCollection(
-      //   'products',
-      //   this.productApi.getAll(),
-      //   (products) => this.productStorage.replaceAll(products)
-      // ),
+      this.syncCollection('products', this.productsApi.getAll(), (products) =>
+        this.productStorage.replaceAll(products),
+      ),
     ]).pipe(map(() => void 0));
   }
 

@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+.product-card {
+  height: 100%;
+}
+
+.product-card__image {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #fff;
+}

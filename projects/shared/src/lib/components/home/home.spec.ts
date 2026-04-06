@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { Home } from './home';
+import { Home } from '@shared/components/home/home';
 
 @Component({
   standalone: true,

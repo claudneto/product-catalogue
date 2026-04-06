@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Footer } from './footer';
+import { Footer } from '@shared/components/footer/footer';
 
 @Component({
   standalone: true,

@@ -3,10 +3,9 @@ import { TestBed } from '@angular/core/testing';
 import { of, throwError } from 'rxjs';
 import { vi } from 'vitest';
 
+import { environment } from '@br/environments/environment';
+import { appConfig } from '@br/app/app.config';
 import { API_BASE_URL, IMAGES_BASE_URL, CatalogSync } from 'shared';
-
-import { environment } from '../environments/environment';
-import { appConfig } from './app.config';
 
 describe('appConfig', () => {
   it('should provide the API and image base URLs from the environment', () => {

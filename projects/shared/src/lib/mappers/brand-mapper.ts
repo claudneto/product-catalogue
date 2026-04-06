@@ -1,7 +1,8 @@
 import { inject, Injectable } from '@angular/core';
 import { BrandDto } from '@shared/models/dtos/brand-dto';
+import { Brand } from '@shared/models/brand';
 import { IMAGES_BASE_URL } from '@shared/tokens/images-base-url.token';
-import { Brand } from 'shared';
+import { ImageUtils } from '@shared/utils/image-utils';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +17,7 @@ export class BrandMapper {
       description: brandDto.description,
       brandUrl: brandDto.brand_url,
       brandTarget: brandDto.brand_target,
-      logo: `${this.imagesBaseUrl}${brandDto.logo}`,
+      logo: ImageUtils.resolveImageUrl(brandDto.logo, this.imagesBaseUrl),
       logoAlt: brandDto.logo_alt,
       updatedAt: new Date(brandDto.updated_at),
     };

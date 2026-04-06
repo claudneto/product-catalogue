@@ -1,11 +1,11 @@
 import { ApplicationConfig, inject, isDevMode, provideAppInitializer } from '@angular/core';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
-import { environment } from '../environments/environment';
-import { API_BASE_URL, CatalogSync, IMAGES_BASE_URL } from 'shared';
-import { baseUrlInterceptor } from './core/interceptors/base-url.interceptor';
 import { provideServiceWorker } from '@angular/service-worker';
-import { routes } from './app.routes';
+import { environment } from '@br/environments/environment';
+import { routes } from '@br/app/app.routes';
+import { baseUrlInterceptor } from '@br/app/core/interceptors/base-url.interceptor';
+import { API_BASE_URL, CatalogSync, IMAGES_BASE_URL } from 'shared';
 
 export const appConfig: ApplicationConfig = {
   providers: [

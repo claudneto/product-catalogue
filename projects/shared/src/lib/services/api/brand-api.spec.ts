@@ -5,9 +5,8 @@ import { vi } from 'vitest';
 
 import { BrandDto } from '@shared/models/dtos/brand-dto';
 import { BrandMapper } from '@shared/mappers/brand-mapper';
+import { BrandApi } from '@shared/services/api/brand-api';
 import { API_BASE_URL } from '@shared/tokens/api-base-url.token';
-
-import { BrandApi } from './brand-api';
 
 describe('BrandApi', () => {
   let service: BrandApi;

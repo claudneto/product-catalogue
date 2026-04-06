@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.product-list__empty {
+  margin: 0;
+  text-align: center;
+  color: #5f6368;
+}

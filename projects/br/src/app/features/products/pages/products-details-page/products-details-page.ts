@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-product-details-page',
+  selector: 'app-products-details-page',
   imports: [],
-  templateUrl: './product-details-page.html',
-  styleUrl: './product-details-page.scss',
+  templateUrl: './products-details-page.html',
+  styleUrl: './products-details-page.scss',
 })
 export class ProductDetailsPage {}

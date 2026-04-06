@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NavBar } from './nav-bar';
+import { NavBar } from '@shared/components/nav-bar/nav-bar';
 
 @Component({
   standalone: true,

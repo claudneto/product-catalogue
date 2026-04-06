@@ -1,0 +1,15 @@
+<mat-card class="product-card" appearance="outlined">
+  @if (product().productImage) {
+  <img
+    mat-card-image
+    class="product-card__image"
+    [src]="product().productImage"
+    [alt]="product().productImageAlt || product().title"
+    loading="lazy"
+  />
+  }
+
+  <mat-card-header>
+    <mat-card-title>{{ product().title }}</mat-card-title>
+  </mat-card-header>
+</mat-card>

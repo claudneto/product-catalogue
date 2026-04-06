@@ -1,9 +1,9 @@
-import { HomePage } from './pages/home-page/home-page';
-import { homeRoutes } from './home.routes';
+import { HomePage } from '@br/features/home/pages/home-page/home-page';
+import { routes } from '@br/features/home/home.routes';
 
 describe('homeRoutes', () => {
   it('should expose the home page as the default feature route', () => {
-    expect(homeRoutes).toEqual([
+    expect(routes).toEqual([
       {
         path: '',
         component: HomePage,

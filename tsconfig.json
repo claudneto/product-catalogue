@@ -14,6 +14,7 @@
     "experimentalDecorators": true,
     "paths": {
       "shared": ["projects/shared/src/public-api.ts"],
+      "@br/*": ["projects/br/src/*"],
       "@br/environments/*": ["projects/br/src/environments/*"],
       "@br/core/*": ["projects/br/src/app/core/*"],
       "@br/features/*": ["projects/br/src/app/features/*"],

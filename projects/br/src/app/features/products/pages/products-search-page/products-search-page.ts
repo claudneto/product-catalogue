@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-product-search-page',
+  selector: 'app-products-search-page',
   imports: [],
-  templateUrl: './product-search-page.html',
-  styleUrl: './product-search-page.scss',
+  templateUrl: './products-search-page.html',
+  styleUrl: './products-search-page.scss',
 })
 export class ProductSearchPage {}

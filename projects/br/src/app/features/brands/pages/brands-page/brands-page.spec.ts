@@ -1,9 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+ï»¿import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { vi } from 'vitest';
 
 import { BrandStorage } from 'shared';
 
-import { BrandsPage } from './brands-page';
+import { BrandsPage } from '@br/features/brands/pages/brands-page/brands-page';
 
 function createDeferred<T>() {
   let resolve!: (value: T | PromiseLike<T>) => void;
@@ -68,12 +68,12 @@ describe('BrandsPage', () => {
       },
       {
         tid: 1,
-        title: 'Ácido',
+        title: 'Ãcido',
         description: null,
         brandUrl: null,
         brandTarget: null,
         logo: '/acido.svg',
-        logoAlt: 'Ácido',
+        logoAlt: 'Ãcido',
         updatedAt: new Date('2026-04-06T12:00:00.000Z'),
       },
       {
@@ -175,3 +175,4 @@ describe('BrandsPage', () => {
     expect(compiled.querySelector('lib-brand-card')).not.toBeNull();
   });
 });
+

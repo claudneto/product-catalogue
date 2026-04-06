@@ -4,8 +4,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideLocationMocks } from '@angular/common/testing';
 import { provideRouter, Router } from '@angular/router';
 import { vi } from 'vitest';
-
-import { TitleBar } from './title-bar';
+import { TitleBar } from '@shared/components/title-bar/title-bar';
 
 @Component({
   standalone: true,

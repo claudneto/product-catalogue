@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
+import { BrandStorage } from '@shared/services/storage/brand-storage';
 import { vi } from 'vitest';
-
-import { BrandStorage } from './brand-storage';
 
 type MockRequest<T = unknown> = {
   error: Error | null;

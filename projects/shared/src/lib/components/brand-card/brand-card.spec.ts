@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Brand } from '@shared/models/brand';
-
-import { BrandCard } from './brand-card';
+import { BrandCard } from '@shared/components/brand-card/brand-card';
 
 @Component({
   standalone: true,

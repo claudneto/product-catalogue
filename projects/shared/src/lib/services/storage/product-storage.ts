@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Brand } from '@shared/models/brand';
+
+import { Product } from '@shared/models/product';
 import {
   IndexedDbStorage,
   IndexedDbStorageConfig,
@@ -8,11 +9,11 @@ import {
 @Injectable({
   providedIn: 'root',
 })
-export class BrandStorage extends IndexedDbStorage<Brand> {
+export class ProductStorage extends IndexedDbStorage<Product> {
   protected override setup(): IndexedDbStorageConfig {
     return {
-      storeName: 'brands',
-      keyPath: 'tid',
+      storeName: 'products',
+      keyPath: 'nid',
     };
   }
 }
