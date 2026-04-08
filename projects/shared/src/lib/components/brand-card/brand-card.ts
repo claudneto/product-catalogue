@@ -1,13 +1,14 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { RouterLink } from '@angular/router';
 
 import { Brand } from '@shared/models/brand';
 
 @Component({
   selector: 'lib-brand-card',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule],
+  imports: [MatCardModule, MatButtonModule, RouterLink],
   templateUrl: './brand-card.html',
   styleUrl: './brand-card.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

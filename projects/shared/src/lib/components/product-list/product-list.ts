@@ -13,4 +13,8 @@ import { Product } from '@shared/models/product';
 })
 export class ProductList {
   public readonly products = input.required<Product[]>();
+
+  protected isCompactLayout(): boolean {
+    return this.products().length > 0 && this.products().length <= 3;
+  }
 }

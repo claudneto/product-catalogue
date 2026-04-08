@@ -1,5 +1,5 @@
 @if (products().length > 0) {
-  <div class="product-list">
+  <div class="product-list" [class.product-list--compact]="isCompactLayout()">
     @for (product of products(); track product.nid) {
       <lib-product-card [product]="product"></lib-product-card>
     }

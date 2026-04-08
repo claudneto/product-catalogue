@@ -19,9 +19,18 @@
     }
   </mat-card-content>
 
-  @if (brand().brandUrl) {
   <mat-card-actions align="end">
-    <a mat-stroked-button color="primary" [href]="brand().brandUrl"> Acessar marca </a>
+    <a
+      mat-button
+      color="primary"
+      [routerLink]="'/products'"
+      [queryParams]="{ brand: brand().title }"
+    >
+      Ver produtos
+    </a>
+
+    @if (brand().brandUrl) {
+      <a mat-stroked-button color="primary" [href]="brand().brandUrl"> Acessar marca </a>
+    }
   </mat-card-actions>
-  }
 </mat-card>

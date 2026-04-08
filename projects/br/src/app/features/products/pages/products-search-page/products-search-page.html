@@ -1,1 +1,54 @@
-<p>product-search-page works!</p>
+﻿<shared-title-bar [title]="title"></shared-title-bar>
+<section class="product-page">
+  @if (loading()) {
+  <div class="product-page__state">
+    <mat-spinner diameter="40" />
+    <p>Carregando produtos...</p>
+  </div>
+  } @else if (error()) {
+  <div class="product-page__state">
+    <p>Nao foi possivel carregar os produtos.</p>
+    <button mat-flat-button color="primary" type="button" (click)="reload()">
+      Tentar novamente
+    </button>
+  </div>
+  } @else if (products().length === 0) {
+  <div class="product-page__state">
+    <p>Nenhum produto encontrado.</p>
+  </div>
+  } @else {
+  <form class="product-page__search" role="search">
+    <label class="product-page__search-label" for="product-search">Buscar produtos</label>
+
+    @if (hasRouteFilters()) {
+    <div class="product-page__active-filters">
+      <p class="product-page__active-filters-text">A listagem está filtrada.</p>
+      <a class="product-page__all-products" routerLink="/products">Ver todos os produtos</a>
+    </div>
+    }
+
+    <div class="product-page__search-field">
+      <input
+        id="product-search"
+        class="product-page__search-input"
+        type="search"
+        [formControl]="searchControl"
+        placeholder="Busque por nome, marca ou categoria"
+      />
+
+      @if (searchControl.value) {
+      <button class="product-page__search-clear" type="button" (click)="clearSearch()">
+        Limpar
+      </button>
+      }
+    </div>
+  </form>
+
+  @if (filteredProducts().length === 0) {
+  <div class="product-page__state">
+    <p>Nenhum produto corresponde a busca.</p>
+  </div>
+  } @else {
+  <lib-product-list [products]="filteredProducts()" />
+  } }
+</section>

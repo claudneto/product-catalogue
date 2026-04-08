@@ -8,6 +8,11 @@
   gap: 1rem;
 }
 
+.product-list--compact {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+  justify-content: start;
+}
+
 .product-list__empty {
   margin: 0;
   text-align: center;

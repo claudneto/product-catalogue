@@ -1,4 +1,5 @@
 ﻿import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { vi } from 'vitest';
 
 import { BrandStorage } from 'shared';
@@ -30,6 +31,7 @@ describe('BrandsPage', () => {
     await TestBed.configureTestingModule({
       imports: [BrandsPage],
       providers: [
+        provideRouter([]),
         {
           provide: BrandStorage,
           useValue: brandStorage,
@@ -175,4 +177,3 @@ describe('BrandsPage', () => {
     expect(compiled.querySelector('lib-brand-card')).not.toBeNull();
   });
 });
-

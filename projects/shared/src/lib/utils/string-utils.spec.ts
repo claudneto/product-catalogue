@@ -7,6 +7,10 @@ describe('StringUtils', () => {
     expect(StringUtils.normalizeNullableString(null)).toBeNull();
   });
 
+  it('should normalize search text by trimming, lowercasing and removing accents', () => {
+    expect(StringUtils.normalizeSearchText('  Fórmula Infantil  ')).toBe('formula infantil');
+  });
+
   it('should replace CRLF with HTML line breaks in HTML content', () => {
     expect(StringUtils.normalizeHtmlString('<p>Line 1</p>\r\n<p>Line 2</p>\r\n')).toBe(
       '<p>Line 1</p><br /><p>Line 2</p><br />',

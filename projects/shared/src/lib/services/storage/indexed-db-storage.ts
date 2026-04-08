@@ -5,7 +5,7 @@ export interface IndexedDbStorageConfig {
 
 export abstract class IndexedDbStorage<T> {
   private readonly dbName = 'catalog-db';
-  private readonly version = 1;
+  private readonly version = new Date().getTime();
 
   protected abstract setup(): IndexedDbStorageConfig;
 

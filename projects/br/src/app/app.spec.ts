@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+﻿import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { App } from '@br/app/app';
 import { routes } from '@br/app/app.routes';
@@ -28,9 +28,9 @@ describe('App', () => {
     const logoImage = compiled.querySelector<HTMLImageElement>('a[navBarLogo] img');
 
     expect(navBar).not.toBeNull();
-    expect(logoLink?.getAttribute('aria-label')).toBe('Ir para a página inicial');
+    expect(logoLink?.getAttribute('aria-label')).toBe('Ir para a p\u00e1gina inicial');
     expect(logoImage?.getAttribute('src')).toBe('/logo-header.svg');
-    expect(logoImage?.getAttribute('alt')).toBe('Nestlé Saúde');
+    expect(logoImage?.getAttribute('alt')).toBe('Nestl\u00e9 Sa\u00fade');
   });
 
   it('should render the router outlet host', () => {
@@ -48,9 +48,11 @@ describe('App', () => {
 
     const compiled = fixture.nativeElement as HTMLElement;
     const content = compiled.querySelector('main.app-content');
+    const container = content?.querySelector('.app-shell__container');
 
     expect(content).not.toBeNull();
-    expect(content?.querySelector('router-outlet')).not.toBeNull();
+    expect(container).not.toBeNull();
+    expect(container?.querySelector('router-outlet')).not.toBeNull();
   });
 
   it('should render the shared footer with the footer logo', () => {
@@ -63,6 +65,6 @@ describe('App', () => {
     expect(compiled.querySelector('img[footerLogo]')?.getAttribute('src')).toBe(
       '/logo-footer.svg',
     );
-    expect(compiled.querySelector('img[footerLogo]')?.getAttribute('alt')).toBe('Nestlé Saúde');
+    expect(compiled.querySelector('img[footerLogo]')?.getAttribute('alt')).toBe('Nestl\u00e9 Sa\u00fade');
   });
 });

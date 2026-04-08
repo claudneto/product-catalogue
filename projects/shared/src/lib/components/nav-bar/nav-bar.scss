@@ -1,18 +1,32 @@
-:host {
+﻿:host {
   display: block;
 }
 
 .nav-bar {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-  align-items: center;
-  gap: 1.5rem;
-  min-height: 5rem;
-  padding: 0.75rem 1.5rem;
+  display: block;
+  width: 100%;
+  min-height: 0;
+  height: auto;
+  padding: 0;
   border-radius: 0;
   border: 1px solid #e5e7eb;
   background: linear-gradient(180deg, rgb(255 255 255 / 0.96), rgb(248 250 252 / 0.92)), #fff;
   box-shadow: 0 16px 40px rgb(15 23 42 / 0.08);
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.nav-bar__container {
+  width: min(100%, 1320px);
+  margin-inline: auto;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 6.5rem;
 }
 
 .nav-bar__logo {
@@ -99,11 +113,18 @@
   fill: currentColor;
 }
 
+@media (min-width: 768px) {
+  .nav-bar__container {
+    padding-inline: 1.5rem;
+  }
+}
+
 @media (max-width: 920px) {
-  .nav-bar {
+  .nav-bar__container {
     grid-template-columns: 1fr;
     justify-items: center;
-    min-height: auto;
+    min-height: 0;
+    padding-block: 1rem;
   }
 
   .nav-bar__logo,

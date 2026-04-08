@@ -1,11 +1,26 @@
-:host {
+﻿:host {
   display: block;
 }
 
 .title-bar {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  margin-bottom: 1.5rem;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #007b9e;
+  color: #fff;
+}
+
+.title-bar__container {
+  width: min(100%, 1320px);
+  margin-inline: auto;
+  padding-inline: 1rem;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: 3rem minmax(0, 1fr) 3rem;
   align-items: center;
+  min-height: 4.5rem;
 }
 
 .title-bar__back-button,
@@ -16,4 +31,15 @@
 
 .title-bar__title {
   text-align: center;
+  color: inherit;
+}
+
+.title-bar__back-button {
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .title-bar__container {
+    padding-inline: 1.5rem;
+  }
 }

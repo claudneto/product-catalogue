@@ -4,6 +4,14 @@ export class StringUtils {
     return normalizedValue ? normalizedValue : null;
   }
 
+  public static normalizeSearchText(value: string): string {
+    return value
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
   public static normalizeHtmlString(value: string | null | undefined): string {
     if (!value) {
       return '';
