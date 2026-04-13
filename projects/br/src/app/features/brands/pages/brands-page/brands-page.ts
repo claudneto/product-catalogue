@@ -10,8 +10,8 @@ import { TitleBar } from 'shared';
 
 @Component({
   selector: 'app-brand-page',
-  standalone: true,
   imports: [MatButtonModule, MatProgressSpinnerModule, BrandCard, TitleBar],
+  standalone: true,
   templateUrl: './brands-page.html',
   styleUrl: './brands-page.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

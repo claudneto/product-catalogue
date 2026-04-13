@@ -7,8 +7,8 @@ import { Brand } from '@shared/models/brand';
 
 @Component({
   selector: 'lib-brand-card',
-  standalone: true,
   imports: [MatCardModule, MatButtonModule, RouterLink],
+  standalone: true,
   templateUrl: './brand-card.html',
   styleUrl: './brand-card.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

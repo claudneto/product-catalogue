@@ -18,6 +18,7 @@ import { Product, ProductList, ProductStorage, StringUtils, TitleBar } from 'sha
     TitleBar,
     ProductList,
   ],
+  standalone: true,
   templateUrl: './products-search-page.html',
   styleUrl: './products-search-page.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

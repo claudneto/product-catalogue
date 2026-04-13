@@ -17,22 +17,40 @@
       }
     },
     {
-      "name": "drupal-images",
-      "installMode": "lazy",
-      "updateMode": "lazy",
-      "resources": {
-        "urls": [
-          "https://www.avantenestle.com.br/sites/default/files/**",
-          "https://avantenestle.com.br/sites/default/files/**"
-        ]
-      }
-    },
-    {
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
       "resources": {
         "files": ["/**/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "catalog-api",
+      "urls": [
+        "https://www.avantenestle.com.br/api-pwa/**",
+        "https://avantenestle.com.br/api-pwa/**",
+        "https://dev-ef5-hcp-corner-br.pantheonsite.io/api-pwa/**"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 100,
+        "maxAge": "7d",
+        "timeout": "10s"
+      }
+    },
+    {
+      "name": "catalog-images",
+      "urls": [
+        "https://www.avantenestle.com.br/sites/default/files/**",
+        "https://avantenestle.com.br/sites/default/files/**",
+        "https://dev-ef5-hcp-corner-br.pantheonsite.io/sites/default/files/**"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 300,
+        "maxAge": "30d"
       }
     }
   ]

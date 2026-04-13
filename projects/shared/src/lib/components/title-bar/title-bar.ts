@@ -10,6 +10,7 @@ import { filter, map, startWith } from 'rxjs';
 @Component({
   selector: 'shared-title-bar',
   imports: [MatButtonModule, MatIconModule, MatToolbar],
+  standalone: true,
   templateUrl: './title-bar.html',
   styleUrl: './title-bar.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

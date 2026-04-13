@@ -5,6 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:br": "ng build br",
+    "serve:build": "http-server ./dist/br/browser -p 8080 -c-1",
+    "preview:build": "npm run build:br && npm run serve:build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -27,6 +30,7 @@
     "@angular/build": "^21.2.6",
     "@angular/cli": "^21.2.3",
     "@angular/compiler-cli": "^21.2.0",
+    "http-server": "^14.1.1",
     "jsdom": "^28.0.0",
     "ng-packagr": "^21.2.0",
     "prettier": "^3.8.1",

@@ -1,4 +1,4 @@
-import { ApplicationConfig, inject, isDevMode, provideAppInitializer } from '@angular/core';
+import { ApplicationConfig, inject, provideAppInitializer } from '@angular/core';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { provideServiceWorker } from '@angular/service-worker';
@@ -20,8 +20,8 @@ export const appConfig: ApplicationConfig = {
       useValue: environment.images.baseUrl,
     },
     provideServiceWorker('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      registrationStrategy: 'registerWhenStable:30000',
+      enabled: true,
+      registrationStrategy: 'registerImmediately',
     }),
     provideAppInitializer(() => {
       const catalogSync = inject(CatalogSync);

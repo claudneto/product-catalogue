@@ -52,14 +52,11 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
+              "serviceWorker": "projects/br/ngsw-config.development.json",
               "fileReplacements": [
                 {
                   "replace": "projects/br/src/environments/environment.ts",
                   "with": "projects/br/src/environments/environment.development.ts"
-                },
-                {
-                  "replace": "projects/br/ngsw-config.json",
-                  "with": "projects/br/ngsw-config.development.json"
                 }
               ]
             }

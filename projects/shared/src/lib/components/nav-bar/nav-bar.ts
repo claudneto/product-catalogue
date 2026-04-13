@@ -17,8 +17,8 @@ type NavBarSocialLink = {
 
 @Component({
   selector: 'shared-nav-bar',
-  standalone: true,
   imports: [MatButtonModule, MatToolbarModule],
+  standalone: true,
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

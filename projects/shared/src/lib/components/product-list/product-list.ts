@@ -5,8 +5,8 @@ import { Product } from '@shared/models/product';
 
 @Component({
   selector: 'lib-product-list',
-  standalone: true,
   imports: [ProductCard],
+  standalone: true,
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

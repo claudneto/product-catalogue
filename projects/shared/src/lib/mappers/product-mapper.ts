@@ -62,7 +62,8 @@ export class ProductMapper {
       technicalCharacteristics: productDto.technical_characteristics.map((item) =>
         this.mapTechnicalCharacteristic(item),
       ),
-      technicalCharacteristicsComplementLabel: productDto.technical_characteristics_complement_label,
+      technicalCharacteristicsComplementLabel:
+        productDto.technical_characteristics_complement_label,
       technicalCharacteristicsComplement: StringUtils.normalizeHtmlString(
         productDto.technical_characteristics_complement,
       ),
@@ -76,7 +77,9 @@ export class ProductMapper {
       dosageTableTotalVolumeTitle: productDto.dosage_table_total_volume_title,
       dosageTableNumPowderTitle: productDto.dosage_table_num_powder_title,
       dosageTableWaterVolumeTitle: productDto.dosage_table_water_volume_title,
-      dosageTableExtraInformation: StringUtils.normalizeHtmlString(productDto.dosage_table_extra_information),
+      dosageTableExtraInformation: StringUtils.normalizeHtmlString(
+        productDto.dosage_table_extra_information,
+      ),
       dosageTable: productDto.dosage_table.map((item) => this.mapDosageRow(item)),
       consumptionSuggestionLabel: productDto.consumption_suggestion_label,
       consumptionSuggestion: StringUtils.normalizeHtmlString(productDto.consumption_suggestion),

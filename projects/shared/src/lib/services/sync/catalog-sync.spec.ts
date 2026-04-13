@@ -4,6 +4,7 @@ import { vi } from 'vitest';
 
 import { BrandApi } from '@shared/services/api/brand-api';
 import { ProductsApi } from '@shared/services/api/products-api';
+import { ImagePrefetchService } from '@shared/services/cache/image-prefetch';
 import { BrandStorage } from '@shared/services/storage/brand-storage';
 import { ProductStorage } from '@shared/services/storage/product-storage';
 import { CatalogSync } from '@shared/services/sync/catalog-sync';
@@ -12,8 +13,9 @@ describe('CatalogSync', () => {
   let service: CatalogSync;
   let brandApi: { getAll: ReturnType<typeof vi.fn> };
   let productsApi: { getAll: ReturnType<typeof vi.fn> };
-  let brandStorage: { replaceAll: ReturnType<typeof vi.fn> };
-  let productStorage: { replaceAll: ReturnType<typeof vi.fn> };
+  let brandStorage: { getAll: ReturnType<typeof vi.fn>; replaceAll: ReturnType<typeof vi.fn> };
+  let productStorage: { getAll: ReturnType<typeof vi.fn>; replaceAll: ReturnType<typeof vi.fn> };
+  let prefetch: { prefetch: ReturnType<typeof vi.fn> };
 
   beforeEach(() => {
     brandApi = {
@@ -23,10 +25,15 @@ describe('CatalogSync', () => {
       getAll: vi.fn(),
     };
     brandStorage = {
+      getAll: vi.fn(),
       replaceAll: vi.fn(),
     };
     productStorage = {
+      getAll: vi.fn(),
       replaceAll: vi.fn(),
+    };
+    prefetch = {
+      prefetch: vi.fn(),
     };
 
     TestBed.configureTestingModule({
@@ -47,6 +54,10 @@ describe('CatalogSync', () => {
         {
           provide: ProductStorage,
           useValue: productStorage,
+        },
+        {
+          provide: ImagePrefetchService,
+          useValue: prefetch,
         },
       ],
     });
@@ -74,8 +85,11 @@ describe('CatalogSync', () => {
 
     brandApi.getAll.mockReturnValue(of(brands));
     productsApi.getAll.mockReturnValue(of([]));
+    brandStorage.getAll.mockResolvedValue(brands);
+    productStorage.getAll.mockResolvedValue([]);
     brandStorage.replaceAll.mockResolvedValue(undefined);
     productStorage.replaceAll.mockResolvedValue(undefined);
+    prefetch.prefetch.mockResolvedValue(undefined);
 
     await expect(firstValueFrom(service.run())).resolves.toBeUndefined();
 
@@ -84,6 +98,7 @@ describe('CatalogSync', () => {
     expect(brandStorage.replaceAll).toHaveBeenCalledTimes(1);
     expect(brandStorage.replaceAll).toHaveBeenCalledWith(brands);
     expect(productStorage.replaceAll).toHaveBeenCalledWith([]);
+    expect(prefetch.prefetch).toHaveBeenCalledWith(['/solaris.svg']);
   });
 
   it('should swallow API errors and log the failed collection', async () => {
@@ -92,13 +107,17 @@ describe('CatalogSync', () => {
 
     brandApi.getAll.mockReturnValue(throwError(() => apiError));
     productsApi.getAll.mockReturnValue(of([]));
+    brandStorage.getAll.mockResolvedValue([]);
+    productStorage.getAll.mockResolvedValue([]);
     productStorage.replaceAll.mockResolvedValue(undefined);
+    prefetch.prefetch.mockResolvedValue(undefined);
 
     await expect(firstValueFrom(service.run())).resolves.toBeUndefined();
 
     expect(brandStorage.replaceAll).not.toHaveBeenCalled();
     expect(productStorage.replaceAll).toHaveBeenCalledWith([]);
     expect(consoleErrorSpy).toHaveBeenCalledWith('Failed to sync brands', apiError);
+    expect(prefetch.prefetch).toHaveBeenCalledWith([]);
   });
 
   it('should swallow storage errors and keep the sync observable completed', async () => {
@@ -119,8 +138,11 @@ describe('CatalogSync', () => {
 
     brandApi.getAll.mockReturnValue(of(brands));
     productsApi.getAll.mockReturnValue(of([]));
+    brandStorage.getAll.mockResolvedValue([]);
+    productStorage.getAll.mockResolvedValue([]);
     brandStorage.replaceAll.mockRejectedValue(storageError);
     productStorage.replaceAll.mockResolvedValue(undefined);
+    prefetch.prefetch.mockResolvedValue(undefined);
 
     await expect(firstValueFrom(service.run())).resolves.toBeUndefined();
 
@@ -137,7 +159,12 @@ describe('CatalogSync', () => {
         titleLabel: 'Product name',
         title: 'Alpha',
         slug: 'alpha',
-        imagesCarousel: [],
+        imagesCarousel: [
+          {
+            imageUrl: '/alpha-carousel.png',
+            imageUrlAlt: 'Alpha carousel',
+          },
+        ],
         productImage: '/alpha.png',
         productImageAlt: 'Alpha',
         productDefinitionLabel: 'Definition',
@@ -158,7 +185,12 @@ describe('CatalogSync', () => {
         proteinsLabel: 'Proteins',
         proteins: '17',
         nutritionalTableLabel: 'Nutritional table',
-        nutritionalTable: [],
+        nutritionalTable: [
+          {
+            imageUrl: '/alpha-table.png',
+            imageUrlAlt: 'Alpha table',
+          },
+        ],
         nutritionTableCaptionLabel: 'Caption',
         nutritionTableCaption: '',
         technicalCharacteristicsLabel: 'Technical characteristics',
@@ -198,12 +230,12 @@ describe('CatalogSync', () => {
           canonicalUrl: 'https://example.com/alpha',
           googleSiteVerification: [],
           hreflangXdefault: 'https://example.com/api/product',
-          ogImage: [],
+          ogImage: ['https://example.com/alpha-og.jpg'],
           title: 'Alpha',
           twitterCardsImage: 'https://example.com/alpha-twitter.jpg',
           description: 'Alpha',
           ogDescription: 'Alpha',
-          ogImageUrl: [],
+          ogImageUrl: ['https://example.com/alpha-og-url.jpg'],
           ogSiteName: 'Site',
           ogTitle: 'Alpha',
           ogType: 'website',
@@ -217,12 +249,23 @@ describe('CatalogSync', () => {
 
     brandApi.getAll.mockReturnValue(of([]));
     productsApi.getAll.mockReturnValue(of(products));
+    brandStorage.getAll.mockResolvedValue([]);
+    productStorage.getAll.mockResolvedValue(products);
     brandStorage.replaceAll.mockResolvedValue(undefined);
     productStorage.replaceAll.mockResolvedValue(undefined);
+    prefetch.prefetch.mockResolvedValue(undefined);
 
     await expect(firstValueFrom(service.run())).resolves.toBeUndefined();
 
     expect(productsApi.getAll).toHaveBeenCalledTimes(1);
     expect(productStorage.replaceAll).toHaveBeenCalledWith(products);
+    expect(prefetch.prefetch).toHaveBeenCalledWith([
+      '/alpha.png',
+      '/alpha-carousel.png',
+      '/alpha-table.png',
+      'https://example.com/alpha-twitter.jpg',
+      'https://example.com/alpha-og.jpg',
+      'https://example.com/alpha-og-url.jpg',
+    ]);
   });
 });

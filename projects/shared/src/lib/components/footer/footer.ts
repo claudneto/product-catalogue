@@ -8,8 +8,8 @@ type FooterLink = {
 
 @Component({
   selector: 'shared-footer',
-  standalone: true,
   templateUrl: './footer.html',
+  standalone: true,
   styleUrl: './footer.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

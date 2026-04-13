@@ -4,8 +4,8 @@ import { Product } from '@shared/models/product';
 
 @Component({
   selector: 'lib-product-card',
-  standalone: true,
   imports: [MatCardModule],
+  standalone: true,
   templateUrl: './product-card.html',
   styleUrl: './product-card.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
